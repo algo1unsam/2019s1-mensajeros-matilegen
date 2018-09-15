@@ -42,8 +42,7 @@ Nuevos requerimientos para la mensajería, se necesita saber:
 - Si para la mensajería el paquete es fácil. El paquete es fácil cuando cualquiera de sus mensajeros puede entregarlo.
 - Saber los mensajeros candidatos de una mensajería para llevar un paquete, es decir, aquellos mensajeros que son capaces de llevar el paquete.
 - Saber si una mensajería tiene sobrepeso. Esto sucede si el promedio del peso de los mensajeros es superior a 500 Kg (Nota: Para el peso de Roberto se cuenta el transporte).
-- Hacer que la empresa de mensajería envíe un paquete. Para ello elige cualquier mensajero entre los que pueden enviarlo, y registra que fue enviado. En el caso de no haber nadie para enviarlo, debe informarse con un error descriptivo.
-- Conocer todos los paquetes que fueron enviados por la mensajeria.
+- Hacer que la empresa de mensajería envíe el paquete. Para ello elige cualquier mensajero entre los que pueden enviarlo, y registra que fue enviado. En el caso de no haber nadie para enviarlo, debe informarse con un error descriptivo.
 
 Cada punto debe tener mínimo un test
 
@@ -56,6 +55,7 @@ A su vez, hay nuevos requerimientos para la mensajeria:
 - Agregarle una lista de los paquetes recibidos.
 - Hacer que se envien todos los paquetes recibidos que se puedan enviar, registrándolo adecuadamente.
 - Encontrar el paquete más caro (el paquete original tiene un precio variable).
+- Conocer todos los paquetes que fueron enviados por la mensajeria.
 - Saber el porcentaje de eficacia de la mensajería, es decir, el porcentaje de paquetes que lograron ser enviados desde que empezó a funcionar. Debe devolver un número entero (buscar cómo hacerlo en la documentación de Number).
 
 Testear la siguiente situación:
