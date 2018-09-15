@@ -48,8 +48,8 @@ Cada punto debe tener mínimo un test
 
 ## Cuarta parte: Mensajería super recargada
 Surgen otros paquetes que la empresa necesita enviar. 
-* Paquetito: es gratis, o sea, no hace falta veriricar si este pago. Ademas, cualquier mensajero lo puede llevar.
-* Paqueton: debe poder pasar por muchos destinos. Su precio es 100$ por cada destino. Se puede ir pagando parcialmente y se debe pagar totalmente para poder ser enviado.
+* Paquetito: es gratis, o sea, no hace falta veriricar que este pago. Ademas, cualquier mensajero lo puede llevar.
+* Paqueton: puede tener más de un destino y para poder enviarse todos los destinos tienen que autorizar al mensajero a pasar. Su precio es 100$ por cada destino. Además, se puede ir pagando parcialmente. Obviamente tiene que estar totalmente pago para poder ser enviado.
 
 A su vez, hay nuevos requerimientos para la mensajeria:
 - Agregarle una lista de los paquetes recibidos.
