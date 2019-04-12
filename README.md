@@ -1,6 +1,3 @@
-# Polimorfismo-Colecciones-Mensajeros-de-pelicula
-Ejercicio incremental, primera parte con colecciones, segunda parte con mensajes basicos de coleccione, tercera parte con colecciones y bloques
-
 # Mensajeros de Película
 
 ## Primera parte: Destinos y mensajeros
@@ -31,7 +28,7 @@ Se necesita poder hacer:
 - despedir a un mensajero
 - despedir a todos los mensajeros
 - analizar si la mensajeria es grande (si tiene mas de dos mensajeros)
-- consultar si el paquete puede ser entregado por el primer empleado de la la empresa de mensajería. 
+- consultar si el paquete puede ser entregado por el primer empleado de la empresa de mensajería. 
 - saber el peso del último mensajero de la empresa. 
 
 Realizar al menos un test por cada item.
