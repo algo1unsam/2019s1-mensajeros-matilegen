@@ -5,7 +5,8 @@ object mensajeria {
 	var mensajeros=#{}
 
 	method contratar(alguien) {
-		mensajeros = alguien
+		mensajeros.add(alguien)
+		
 	}
 	method mensajeros() = mensajeros
 

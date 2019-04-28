@@ -10,7 +10,7 @@ test "Si neo es empleado, Hay un mensajero que puede enviar el paquete" {
 	mensajeria.contratar(neo)
 	paquete.pagar()
 	paquete.destino(matrix)
-	assert.that(mensajeria.mensajeros().contains(neo))
+	assert.that(matrix.dejaPasar(neo))
 }
 test "Que roberto (90kg) puede llevar un paquete que está pago en un camión que tiene un acoplado."{
 	mensajeria.contratar(roberto)
@@ -18,5 +18,59 @@ test "Que roberto (90kg) puede llevar un paquete que está pago en un camión qu
 	paquete.destino(puenteDeBrooklyn)
 	roberto.pesoDeRoberto(90)
 	roberto.viaje(camion,1)
-	assert.that({paquete.destino()}.dejaPasar())
+	assert.that(puenteDeBrooklyn.dejaPasar(roberto))
+}
+//paquete que esta pago
+test "Que neo con crédito no puede llevar un paquete que está pago a la matrix."{
+	mensajeria.contratar(neo)
+	paquete.destino(matrix)
+	neo.credito(true)
+	assert.notThat(matrix.dejaPasar(neo))
+}
+test "Que roberto  no puede llevar un paquete que está pago a la matrix."{
+	mensajeria.contratar(roberto)
+	paquete.pagar()
+	paquete.destino(matrix)
+	assert.notThat(matrix.dejaPasar(roberto))
+}
+test "Que chuckNorris puede llevar un paquete que está pago a la matrix."{
+	mensajeria.contratar(chuckNorris)
+	paquete.pagar()
+	paquete.destino(matrix)
+	assert.that(matrix.dejaPasar(chuckNorris))
+}
+// paquete que no esta pago
+test "Que neo con crédito no puede llevar un paquete que no está pago a la matrix."{
+	mensajeria.contratar(neo)
+	paquete.destino(matrix)
+	neo.credito(true)
+	assert.notThat(matrix.dejaPasar(neo))
+}
+test "Que roberto  no puede llevar un paquete que no está pago a la matrix."{
+	mensajeria.contratar(roberto)
+	paquete.destino(matrix)
+	assert.notThat(matrix.dejaPasar(roberto))
+}
+test "Que chuckNorris no puede llevar un paquete que no está pago a la matrix."{
+	mensajeria.contratar(chuckNorris)
+	paquete.destino(matrix)
+	assert.notThat(matrix.dejaPasar(chuckNorris))
+}
+//paquete que esta pago y no tiene credito neo
+test "Que neo no tiene crédito no puede llevar un paquete que está pago a la matrix."{
+	mensajeria.contratar(neo)
+	paquete.destino(matrix)
+	neo.credito(false)
+	assert.notThat(matrix.dejaPasar(neo))
+}
+//paquete no pago
+test "Que roberto puede llevar un paquete que está no esta pago a el puenteDeBrooklyn."{
+	mensajeria.contratar(roberto)
+	paquete.destino(puenteDeBrooklyn)
+	assert.notThat(puenteDeBrooklyn.dejaPasar(roberto))
+}
+test "Que chuckNorris no puede llevar un paquete que no está pago a el puenteDeBrooklyn."{
+	mensajeria.contratar(chuckNorris)
+	paquete.destino(puenteDeBrooklyn)
+	assert.notThat(puenteDeBrooklyn.dejaPasar(chuckNorris))
 }
